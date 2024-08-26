@@ -1,0 +1,86 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+
+    &__fieldset {
+        border: none;
+        margin-top: 1rem;
+        padding: 0;
+    }
+    &__legend {
+        color: v.$gris;
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+    &__campo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1.5rem 0;
+    }
+    &__contenedor-icono {
+        display: flex;
+    }
+    &__icono {
+        background-color: v.$gris-oscuro;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem 0 0 1rem;
+        i {
+            color: v.$blanco;
+            font-size: 2rem;
+        }
+    }
+    &__label {
+        display: block;
+        font-size: 1.8rem;
+        color: rgba(v.$negro, .8);
+    }
+    &__input,
+    &__select {
+        padding: 1rem;
+        border: 1px solid darken(v.$gris-claro, 20);
+        border-radius: .5rem;
+        border-radius: 0 1rem 1rem 0;
+        &--file {
+            border: none;
+        }
+        &--sociales {
+            @extend .formulario__input;
+            flex: 1;
+        }
+    }   
+    &__listado {
+        @include m.tags;
+    }
+    &__submit {
+        @include m.boton(v.$azul, v.$blanco);
+        width: auto;
+        align-self: flex-start;
+        &--registrar {
+            width: 100%;
+            @include m.tablet {
+                width: auto;
+                margin-top: 2rem;
+            }
+        }
+        &--full {
+            width: 100%;
+        }
+    }
+    &__texto {
+        margin-top: 3rem;
+    }
+    &__imagen {
+        max-width: 20rem;
+    }
+    &__radio {
+        display: flex;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,86 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.agenda {
+    padding: 5rem 0;
+    @include m.contenedor;
+}
+
+.eventos {
+    $modificador: &;
+    &__heading {
+        color: v.$azul;
+        margin: 5rem 0;
+        text-align: left;
+        font-size: clamp(2rem, -0.8rem + 8vw, 6rem);
+    }
+    &__fecha {
+        color: v.$gris;
+        margin: 3rem 0 1rem 0;
+    }
+    &--workshops {
+        #{$modificador}__heading {
+            color: v.$secundario;
+        }
+        .evento__informacion {
+            background-color: v.$secundario;
+            &:hover {
+                background-color: darken($color: v.$secundario, $amount: 10);
+            }
+        }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: v.$blanco;
+    }   
+}
+.evento {
+    &__hora {
+        font-weight: v.$bold;
+    }
+    &__informacion {
+        background-color: v.$azul;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: v.$blanco;
+        transition: 400ms background-color ease;
+
+        &:hover {
+            background-color: darken($color: v.$azul, $amount: 10);
+        }
+    }
+    &__nombre {
+        font-size: 2.4rem;
+        margin: 0;
+    }
+    &__introduccion {
+        font-size: 1.6rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    &__autor-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+    &__imagen-autor {
+        width: 5rem;
+        background-color: v.$blanco;
+        border-radius: 50%;
+    }
+    &__autor-nombre {
+        font-weight: v.$bold;
+    }
+    &__agregar {
+        @include m.boton(v.$blanco, v.$negro);
+        margin-top: 1rem;
+
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+}
