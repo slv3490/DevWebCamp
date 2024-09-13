@@ -3,6 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#007df4">
+    <!-- Open Graph -->
+    <meta property="og:title" content="DevWebCamp pagina web para desarrolladores">
+    <meta property="og:description" content="DevWebCamp es una conferencia para desarrolladores que cuenta con ponentes ofreciendo charlas y workshops. Los asistentes también tendrán la posibilidad de registrarse mediante un pago a través de PayPal.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://i.postimg.cc/k5cWT6qM/ogimage.png">
+    <meta property="og:image:alt" content="Imagen principal de la pagina web de DevWebCamp.">
+    <meta property="description" content="DevWebCamp es una conferencia para desarrolladores que cuenta con ponentes ofreciendo charlas y workshops. Los asistentes también tendrán la posibilidad de registrarse mediante un pago a través de PayPal.">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DevWebCamp pagina web para desarrolladores">
+    <meta name="twitter:description" content="DevWebCamp es una conferencia para desarrolladores que cuenta con ponentes ofreciendo charlas y workshops. Los asistentes también tendrán la posibilidad de registrarse mediante un pago a través de PayPal.">
+    <meta name="twitter:image" content="https://i.postimg.cc/k5cWT6qM/ogimage.png">
+
     <title>DevWebCamp - <?php echo $titulo; ?></title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
